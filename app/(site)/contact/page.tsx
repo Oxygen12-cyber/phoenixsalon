@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ClockIcon,
+  InfoIcon,
   InstagramLogoIcon,
   MapPinIcon,
   TiktokLogoIcon,
@@ -153,6 +154,23 @@ const ContactPage = () => {
                       </li>
                     ))}
                   </ul>
+                </div>
+              </div>
+            </Reveal>
+
+            <Reveal y={30}>
+              <div className="flex items-start gap-4 rounded-2xl bg-white p-6 shadow-sm ring-1 ring-black/5">
+                <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#F7EBE7] text-black">
+                  <InfoIcon size={22} weight="bold" />
+                </span>
+                <div>
+                  <h2 className="text-base font-semibold text-black">
+                    Cancellation policy
+                  </h2>
+                  <p className="mt-1 text-sm font-light text-[#6B6560]">
+                    Confirmed appointments that are canceled are subject to a
+                    cancellation fee. No online payment is needed to book.
+                  </p>
                 </div>
               </div>
             </Reveal>
