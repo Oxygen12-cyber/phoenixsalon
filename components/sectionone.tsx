@@ -9,6 +9,7 @@ import {
   SketchLogoIcon,
 } from "@phosphor-icons/react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
 import type { Variants } from "motion/react";
 import Typewriter from "./typewriter";
@@ -104,26 +105,32 @@ const SectionOne = () => {
   );
 
   return (
-    <section ref={ref} className="relative w-full h-[80vh] overflow-hidden">
+    <section
+      ref={ref}
+      className="relative w-full h-[80vh] min-h-[540px] overflow-hidden"
+    >
       <motion.div style={{ y: imgY }} className="absolute inset-0">
-        <motion.div
-          className="absolute inset-0"
-          animate={reduceMotion ? undefined : { scale: [1, 1.08, 1] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-        >
+        <div className="hero-breathe absolute inset-0">
           <Image
-            // src="/assets/hero1.png"
             src="/phoenix_shop.jpeg"
-            alt="hero"
+            alt="Phoenix Salon storefront in Liverpool"
             fill
             sizes="100vw"
             priority
-            className="object-cover scale-x-100"
+            className="object-cover object-center"
           />
-        </motion.div>
+        </div>
       </motion.div>
 
-      {/* layer 2: gradient over left half of image */}
+      {/* layer 2: gradient — bottom-right bloom on mobile, left-half wash on desktop */}
+      <motion.div
+        style={{
+          y: gradientY,
+          background:
+            "linear-gradient(to top left, rgba(244,199,184,0.46) 10%, rgba(247,235,231,0.25) 50%, rgba(247,235,231,0) 65%), linear-gradient(to top, rgba(247,235,231,0.94) 0%, rgba(247,235,231,0.78) 28%, rgba(247,235,231,0) 78%)",
+        }}
+        className="absolute inset-0 lg:hidden"
+      />
       <motion.div
         style={{
           y: gradientY,
@@ -133,7 +140,7 @@ const SectionOne = () => {
           WebkitMaskImage:
             "linear-gradient(to right, black 60%, transparent 100%)",
         }}
-        className="absolute inset-y-0 left-0 w-full lg:w-1/2"
+        className="hidden lg:block absolute inset-y-0 left-0 w-1/2"
       />
 
       {/* layer 3: text layer, left aligned over the gradient */}
@@ -142,7 +149,7 @@ const SectionOne = () => {
         variants={container}
         initial="hidden"
         animate="show"
-        className="absolute inset-y-0 pt-72 md:pt-0 left-0 w-full lg:w-1/2 flex flex-col items-start justify-center gap-4 sm:gap-6 px-6 sm:px-10 lg:px-16"
+        className="absolute inset-y-0 left-0 flex w-full flex-col items-start justify-end gap-4 px-6 pb-8 pt-24 sm:gap-6 sm:px-10 sm:pb-12 md:justify-center md:py-0 lg:w-1/2 lg:px-16"
       >
         <motion.h1
           variants={item}
@@ -187,33 +194,36 @@ const SectionOne = () => {
             rel="noopener noreferrer"
             whileHover={reduceMotion ? undefined : { scale: 1.04 }}
             whileTap={reduceMotion ? undefined : { scale: 0.97 }}
-            className="px-6 py-3 bg-black rounded-3xl text-white text-xl shadow-sm font-bold"
+            className="rounded-3xl bg-black px-6 py-3 text-center text-xl font-bold text-white shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2"
           >
             Book appointment
           </motion.a>
-          <motion.a
-            href="/service"
+          <motion.div
             whileHover={reduceMotion ? undefined : { scale: 1.04 }}
             whileTap={reduceMotion ? undefined : { scale: 0.97 }}
-            className="flex items-center justify-center gap-3"
           >
-            <motion.div
-              animate={
-                reduceMotion
-                  ? undefined
-                  : { scale: [1, 1.09, 1], opacity: [1, 0.82, 1] }
-              }
-              transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
-              className="p-2 border border-black bg-transparent rounded-full"
+            <Link
+              href="/service"
+              className="flex items-center justify-center gap-3 rounded-full py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2"
             >
-              <PlayIcon size={32} weight="duotone" className="" />
-            </motion.div>
-            <div className="font-bold text-black">View our styles</div>
-          </motion.a>
+              <motion.div
+                animate={
+                  reduceMotion
+                    ? undefined
+                    : { scale: [1, 1.09, 1], opacity: [1, 0.82, 1] }
+                }
+                transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
+                className="rounded-full border border-black bg-transparent p-2"
+              >
+                <PlayIcon size={32} weight="duotone" />
+              </motion.div>
+              <div className="font-bold text-black">View our styles</div>
+            </Link>
+          </motion.div>
         </motion.div>
         <motion.div
           variants={item}
-          className="invisible md:visible flex items-center justify-center gap-5"
+          className="hidden md:flex items-center justify-center gap-5"
         >
           <CommendText
             elementIcon={<SketchLogoIcon size={32} weight="bold" />}
@@ -244,7 +254,7 @@ const SectionOne = () => {
           reduceMotion ? undefined : { y: [0, -10, 0], rotate: [-12, -8, -12] }
         }
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-        className="invisible md:visible absolute right-0 bottom-28 pr-48 -rotate-12"
+        className="hidden md:block absolute right-0 bottom-28 pr-48 -rotate-12"
       >
         <p className="text-white font-bold text-xl tracking-tight leading-tight text-center">
           Hands <br /> that care

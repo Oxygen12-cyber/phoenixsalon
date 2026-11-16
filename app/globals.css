@@ -44,3 +44,39 @@ html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   display: none;
 }
+
+@keyframes hero-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+@keyframes hero-breathe-lg {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+.hero-breathe {
+  animation: hero-breathe 20s ease-in-out infinite;
+}
+
+@media (min-width: 640px) {
+  .hero-breathe {
+    animation-name: hero-breathe-lg;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-breathe {
+    animation: none;
+  }
+}
