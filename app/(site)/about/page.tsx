@@ -50,8 +50,8 @@ const AboutPage = () => {
             </Reveal>
             <Reveal y={30}>
               <p className="max-w-lg text-base font-light leading-relaxed text-[#6B6560] sm:text-lg">
-                Phoenix Salon is a Liverpool studio for braids, installs and
-                extensions. We believe great hair should never hurt — so every
+                Phoenix Salon is an HairStyling and Braiding Salon in Saint John&apos;s Liverpool for braids, installs and
+                extensions. We believe great hair should never hurt — so every 
                 appointment is unhurried, tailored to you, and finished with a
                 polished touch.
               </p>

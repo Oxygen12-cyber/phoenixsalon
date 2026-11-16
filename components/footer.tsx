@@ -56,7 +56,7 @@ const Footer = () => {
               PHOENIX SALON
             </span>
             <span className="text-sm font-light text-[#423F3F]">
-              Hair Stylist
+              By Yvonne
             </span>
           </Link>
           <p className="mt-2 text-xs font-light text-gray-600">
@@ -114,7 +114,8 @@ const Footer = () => {
                 className="mt-0.5 shrink-0 text-gray-600"
               />
               <p className="text-sm font-light text-gray-600">
-                HAIR EXTENSIONS AND STYLING
+                PHOENIX SALON by YVONNE
+                <span className="block text-xs mb-2">HAIR EXTENSIONS AND STYLING</span>
                 <span className="block">
                   St Johns Shopping Centre Liverpool, L1 1LY, UK
                 </span>

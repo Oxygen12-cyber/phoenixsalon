@@ -112,12 +112,13 @@ const SectionOne = () => {
           transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
         >
           <Image
-            src="/assets/hero1.png"
+            // src="/assets/hero1.png"
+            src="/phoenix_shop.jpeg"
             alt="hero"
             fill
             sizes="100vw"
             priority
-            className="object-cover -scale-x-100"
+            className="object-cover scale-x-100"
           />
         </motion.div>
       </motion.div>

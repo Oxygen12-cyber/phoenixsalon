@@ -49,7 +49,7 @@ export const metadata: Metadata = {
       "A Liverpool hair studio for braids, wig installs and hair extensions. Tension-free styling, premium hair and easy WhatsApp booking.",
     images: [
       {
-        url: "/assets/hero1.png",
+        url: "/phoenix_shop.jpeg",
         width: 1029,
         height: 557,
         alt: "Hair styled at Phoenix Salon in Liverpool",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     title: "Phoenix Salon | Hair Stylist & Extensions in Liverpool",
     description:
       "A Liverpool hair studio for braids, wig installs and hair extensions.",
-    images: ["/assets/hero1.png"],
+    images: ["/phoenix_shop.jpeg"],
   },
   robots: { index: true, follow: true },
 };

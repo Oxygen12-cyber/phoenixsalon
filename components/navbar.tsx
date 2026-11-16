@@ -84,7 +84,7 @@ const NavBar = () => {
             PHOENIX SALON
           </div>
           <div className="text-xs sm:text-sm lg:text-lg font-light text-center text-[#423F3F]">
-            Hair Stylist
+            By Yvonne
           </div>
         </motion.div>
 
