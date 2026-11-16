@@ -1,26 +1,46 @@
 @import "tailwindcss";
+@import "@heroui/styles/base" layer(base);
+@import "@heroui/styles/utilities";
+@import "@heroui/styles/variants";
+@import "@heroui/styles/themes/default" layer(theme);
+@import "@heroui/styles/components/modal.css" layer(components);
+@import "@heroui/styles/components/search-field.css" layer(components);
+@import "@heroui/styles/components/close-button.css" layer(components);
+@import "@heroui/styles/components/button.css" layer(components);
+@import "@heroui/styles/components/switch.css" layer(components);
+
+@theme {
+  --font-bree: var(--bree), ui-serif, Georgia, serif;
+  --font-lato: var(--lato), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--bree), ui-serif, Georgia, serif;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --accent: #1c1410;
+  --accent-foreground: #ffffff;
+  --background: #f7ebe7;
+  --foreground: #1c1410;
+  --surface: #fffdfc;
+  --overlay: #fffdfc;
+  --field-background: #ffffff;
+  --field-foreground: #1c1410;
+  --field-placeholder: #80726d;
+  --muted: #6b6560;
+  --border: rgba(28, 20, 16, 0.12);
+  --separator: rgba(28, 20, 16, 0.08);
+  --focus: #1c1410;
+  --link: #1c1410;
+  --backdrop: rgba(20, 14, 11, 0.45);
+  --radius: 0.75rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
 }

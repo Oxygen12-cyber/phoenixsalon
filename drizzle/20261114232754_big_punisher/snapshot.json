@@ -1,0 +1,122 @@
+{
+  "type": "base",
+  "version": "9",
+  "dialect": "postgres",
+  "id": "c7352181-8c3f-4133-bafb-ff6a5fdc9a57",
+  "prevIds": [
+    "00000000-0000-0000-0000-000000000000"
+  ],
+  "footprints": [
+    {
+      "statementType": "create_table",
+      "statementTarget": [
+        "table",
+        "public",
+        "product"
+      ],
+      "writes": [
+        "s|tbl|public.product",
+        "n|tbl|public.product",
+        "e|tbl|public.product",
+        "n|rel|public.product",
+        "n|type|public.product",
+        "n|rel|public.product_pkey"
+      ],
+      "reads": [
+        "n|sch|public"
+      ]
+    }
+  ],
+  "ddl": [
+    {
+      "schema": "public",
+      "name": "product",
+      "isRlsEnabled": false,
+      "entityType": "tables"
+    },
+    {
+      "schema": "public",
+      "table": "product",
+      "name": "id",
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": {
+        "type": "always",
+        "name": "product_id_seq",
+        "increment": "1",
+        "minValue": "1",
+        "maxValue": "2147483647",
+        "startWith": "1",
+        "cycle": false,
+        "cache": 1
+      },
+      "entityType": "columns"
+    },
+    {
+      "schema": "public",
+      "table": "product",
+      "name": "name",
+      "type": "text",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "entityType": "columns"
+    },
+    {
+      "schema": "public",
+      "table": "product",
+      "name": "image_1_url",
+      "type": "text",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "entityType": "columns"
+    },
+    {
+      "schema": "public",
+      "table": "product",
+      "name": "image_2_url",
+      "type": "text",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "entityType": "columns"
+    },
+    {
+      "schema": "public",
+      "table": "product",
+      "name": "description",
+      "type": "text",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "entityType": "columns"
+    },
+    {
+      "schema": "public",
+      "table": "product",
+      "name": "product_pkey",
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": true,
+      "entityType": "pks"
+    }
+  ]
+}
