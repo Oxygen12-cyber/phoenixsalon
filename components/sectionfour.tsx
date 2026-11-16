@@ -161,11 +161,7 @@ const SectionFour = () => {
 
         {/* right side with portrait type image/media */}
         <motion.div style={{ y: imgY }} className="w-full lg:flex-1 lg:pr-2">
-          <motion.div
-            animate={reduceMotion ? undefined : { y: [0, -14, 0] }}
-            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-            className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-3xl lg:aspect-auto lg:h-full lg:max-w-none lg:overflow-visible lg:rounded-none"
-          >
+          <div className="relative mx-auto aspect-4/5 w-full max-w-sm overflow-hidden rounded-3xl lg:aspect-auto lg:h-full lg:max-w-none lg:overflow-visible lg:rounded-none">
             <video
               autoPlay={!reduceMotion}
               loop
@@ -178,7 +174,7 @@ const SectionFour = () => {
             >
               <source src="/phoenix.webm" type="video/webm" />
             </video>
-          </motion.div>
+          </div>
         </motion.div>
       </div>
     </section>
