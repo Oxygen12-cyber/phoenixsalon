@@ -13,6 +13,7 @@
     "@heroui/styles": "^3.2.7",
     "@neondatabase/serverless": "^1.2.1",
     "@phosphor-icons/react": "^2.1.10",
+    "@vercel/analytics": "^2.0.1",
     "dotenv": "^18.0.10",
     "drizzle-orm": "^1.0.0-rc.5",
     "motion": "^14.12.0",

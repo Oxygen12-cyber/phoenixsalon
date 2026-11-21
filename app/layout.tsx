@@ -3,6 +3,7 @@ import { Bree_Serif, Lato } from "next/font/google";
 import "./globals.css";
 import MotionProvider from "@/components/motion-provider";
 import { SITE_URL } from "@/lib/site";
+import { Analytics } from "@vercel/analytics/next";
 
 const breeSerif = Bree_Serif({
   variable: "--bree",
@@ -74,6 +75,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col overflow-x-hidden">
         <MotionProvider>{children}</MotionProvider>
+        <Analytics />
       </body>
     </html>
   );
